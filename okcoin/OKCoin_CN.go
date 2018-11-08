@@ -563,7 +563,7 @@ func (ok *OKCoinCN_API) GetTrades(currencyPair CurrencyPair, since int64) ([]Tra
 		return nil, errors.New(string(body))
 	}
 
-	for _, v := range resp {
+	/*for _, v := range resp {
 		item := v.(map[string]interface{})
 
 		tid := int64(item["tid"].(float64))
@@ -572,7 +572,7 @@ func (ok *OKCoinCN_API) GetTrades(currencyPair CurrencyPair, since int64) ([]Tra
 		price := item["price"].(float64)
 		time := int64(item["date_ms"].(float64))
 		trades = append(trades, Trade{tid, direction, amount, price, time})
-	}
+	}*/
 
 
 	return trades, nil
